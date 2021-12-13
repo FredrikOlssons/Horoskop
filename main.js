@@ -17,16 +17,14 @@ async function saveHoroscope() {
   let addHoroscope = document.getElementById("inputDate").value;
   let date = new Date(addHoroscope);
   let body = new FormData();
-  body.set("date", addHoroscope);
-  let option = {method: "POST" , body}
+  let inputDate = {month: date.getMonth() +1, day: date.getDate()}
+  body.set("date", JSON.stringify(inputDate));
+  let option = {method: "POST" , body:body}
   let result = await makeRequest("./api/addHoroscope.php", option);
-  let month = date.getMonth() +1
-  let day = date.getDate()
-  console.log(date)
-  //console.log(date.getMonth() +1, date.getDate( +1))
-  console.log(day)
-  console.log(month)
-  document.getElementById('addResult').innerText = month
+  console.log(result)
+  
+ 
+ // document.getElementById('addResult').innerText = month
 
 }
 
@@ -51,8 +49,9 @@ async function deleteHoroscope() {
   async function makeRequest(url, option) {
     try {
         let response = await fetch(url, option)
-        let result = response.json()
+        let result = await response.json()
         return result
+
     } catch(err) {
         console.error(err)
     }
