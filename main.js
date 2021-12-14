@@ -24,7 +24,8 @@ async function saveHoroscope() {
   console.log(result)
   
  
- // document.getElementById('addResult').innerText = month
+ // document.getElementById('addResult').innerText = month'
+ // HEJHEJEHJ
 
 }
 
