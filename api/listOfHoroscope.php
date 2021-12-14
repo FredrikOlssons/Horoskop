@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $horoscopeList = [
     [
         'name' => 'Väduren',
@@ -70,10 +70,7 @@ function getsign($horoscopeList, $date) {
         
         if (($horoscope['start']['month'] == $date['month'] && $horoscope['start']['day'] <= $date['day']) || ($horoscope['end']['month'] == $date['month'] && $horoscope['end']['day'] >= $date['day'])) {
             
-            error_log($horoscope['name']);
-        
-        if (($horoscope['start']['month'] == $date['month'] && $horoscope['start']['day'] <= $date['day']) || ($horoscope['end']['month'] == $date['month'] && $horoscope['end']['day'] >= $date['day'])) {
-            
+            error_log($horoscope['name']);     
             return $horoscope['name'];
         };
     }

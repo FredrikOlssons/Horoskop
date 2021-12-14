@@ -1,5 +1,6 @@
 <?php
 
+try {
 session_start();
 
 
@@ -15,7 +16,9 @@ if($_SERVER["REQUEST_METHOD"]) {
     echo json_encode(""); }
 
 }
-
+} catch(Exception $err) {
+       
+}
 
 
 ?>

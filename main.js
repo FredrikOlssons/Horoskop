@@ -7,7 +7,7 @@ document.getElementById("deleteButton").addEventListener("click", deleteHoroscop
 async function initSite() {}
 
 async function addResultInput() {
-    document.getElementById('addResult').innerText = result
+    document.getElementById("addResult").innerText = result
     let resultHoroscope = await makeRequest(url, body, option, addDate);
     console.log(resultHoroscope)
 }
@@ -25,17 +25,17 @@ async function saveHoroscope() {
   
  
  // document.getElementById('addResult').innerText = month'
- // HEJHEJEHJ
+ 
 
 }
 
 async function deleteHoroscope() {
   let deleteHoroscope = document.getElementById("inputDate").value;
-  let body = new FormData();
-  let option = {method: "DELETE" , body}
-  body.set(deleteHoroscope , "date");
+  let option = {method: "DELETE"}
   let result = await makeRequest("./api/deleteHoroscope.php", option);
   console.log(result)
+  //console.log(deleteHoroscope)
+
 }
 
   async function updateHoroscope() {
