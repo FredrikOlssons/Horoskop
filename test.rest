@@ -1,1 +1,1 @@
-DELETE http://localhost:3000/api/deleteHoroscope.php
+http://localhost:3000/api/listOfHoroscope.php

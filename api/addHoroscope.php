@@ -20,6 +20,16 @@ try {
         } else {
             echo json_encode(false);
             echo json_encode("Not a POST-method");
+                if (!isset($_SESSION["horoscope"])) {
+                $date = json_decode($_POST['date'], true);
+                $horoscope = getsign($horoscopeList, $date);
+                $_SESSION['horoscope'] = serialize($horoscope);
+                echo json_encode(true);
+                exit;
+            
+            } else {
+                echo json_encode(false);
+            }
         }
     
     }
@@ -29,6 +39,4 @@ try {
 
 
 ?>
-
-
 
