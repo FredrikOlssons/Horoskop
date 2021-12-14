@@ -63,60 +63,20 @@ $horoscopeList = [
     ],
 ];
 
-function calculate($horoscopeList , $date) {
-
-    $date = ["month = 3, ']
-
-for ($i = 0; $i < count($horoscopeList); $i++) {
-    $horoscope = $horoscopeList[$i];
-
-   
-    $startMonth = $horoscope["start"]["month"];
-    $startDay = $horoscope["start"]["day"];
-    $endMonth = $horoscope["end"]["month"];
-    $endDay = $horoscope["end"]["day"];
-
-    if ($date == $startMonth, $startDay 
-
-
-    if ($startMonth === $date  3 && $startDay >= 21 && $endMonth <= 4 && $endDay <= 20) {
-        return 'Väduren';
+function getsign($horoscopeList, $date) {
+    
+    for ($i = 0; $i < count($horoscopeList); $i++) {
+        $horoscope = $horoscopeList[$i];
+        
+        if (($horoscope['start']['month'] == $date['month'] && $horoscope['start']['day'] <= $date['day']) || ($horoscope['end']['month'] == $date['month'] && $horoscope['end']['day'] >= $date['day'])) {
+            
+            error_log($horoscope['name']);
+            return $horoscope['name'];
+        };
     }
-
-}
-}
-
+};      
 
 ?>
-
-function getsign($startMonth, $startDay, $endMonth, $endDay) {
-if(($startMonth==1 && $startDay>20)||($endMonth==2 && $endDay<19)) { $mysign="Vattumannen" ; } 
-if(($startMonth==2 && $startDay>18)||($endMonth==3 && $endDay<21)) { $mysign="Fiskarna" ; } 
-if(($startMonth==3 && $startDay>20)||($endMonth==4 && $endDay<21)) { $mysign="Väduren" ; } 
-if(($startMonth==4 && $startDay>21)||($endMonth==5 && $endDay<22)) { $mysign="Oxen" ; } 
-if(($startMonth==5 && $startDay>21)||($endMonth==6 && $endDay<22)) { $mysign="Tvillingarna" ; } 
-if(($startMonth==6 && $startDay>21)||($endMonth==7 && $endDay<23)) { $mysign="Kräftan" ; } 
-if(($startMonth==7 && $startDay>22)||($endMonth==8 && $endDay<24)) { $mysign="Lejon" ; } 
-if(($startMonth==8 && $startDay>23)||($endMonth==9 && $endDay<23)) { $mysign="Jungfru" ; } 
-if(($startMonth==9 && $startDay>22)||($endMonth==10 && $endDay<24)) { $mysign="Vågen" ; } 
-if(($startMonth==10 && $startDay>23)||($endMonth==11 && $endDay<23)) { $mysign="Skorpion" ; } 
-if(($startMonth==11 && $startDay>21)||($endMonth==12 && $endDay<21)) { $mysign="Skytten" ; } 
-if(($startMonth==12 && $startDay>21)||($endMonth==1 && $endDay<21)) { $mysign="Stenbock" ; } 
-
-
-
-
-
-
-
-
-
-
-
-return $mysign; } print_r(getsign(16,7));
-
-
-
 
 
 

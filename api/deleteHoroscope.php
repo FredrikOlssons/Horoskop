@@ -9,8 +9,11 @@
             exit;
     
             if (isset($_SESSION["horoscope"])) {
-                unset($_SESSION['horoscope']);
+                session_destroy();
+                //unset($_SESSION['horoscope']);
                 echo json_encode(true);
+
+                // destroy????
             } else {     
                 echo json_encode(false);
             }
