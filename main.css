@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-    padding: 20px;
     margin: 0px;
 }
 
@@ -29,9 +28,17 @@
     flex-direction: column;
 }
 
+h1 {
+    color: antiquewhite;
+    font-family: 'Sassy Frass', cursive;
+    font-size: 60px;
+    padding-top: 30px;
+}
 
 h2 {
-    color: rebeccapurple;
+    color: antiquewhite;
+    font-family: 'Sassy Frass', cursive;
+    font-size: 60px;
 }
 
 #date{
@@ -57,4 +64,12 @@ button {
     color: rebeccapurple;
     background-color: white ;
     border: solid; color: rebeccapurple;
+    height: 50px;
+}
+
+#addResult {
+    color: antiquewhite;
+    font-family: 'Sassy Frass', cursive;
+    font-size: 100px;
+    border: 0px
 }
