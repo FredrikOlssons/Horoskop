@@ -7,11 +7,17 @@
         if($_SERVER["REQUEST_METHOD"]) {
     
             if($_SERVER["REQUEST_METHOD"] == "POST") {
-                //echo json_encode($_SESSION["horoscope"]);
         
                 if (isset($_SESSION["horoscope"])) {
+                    $date = json_decode($_POST["date"], true);
+                    $horoscope = getsign($horoscopeList, $date);
+                    error_log($horoscope);
+                    $_SESSION["horoscope"] = serialize($horoscope);
                     echo json_encode(true);
                     
+                    /* $saved_horoscope = unserialize($_SESSION['horoscope']); 
+                    echo json_encode($saved_horoscope);
+                     */
                     exit;
                 } else {
                     echo json_encode(false);
@@ -25,10 +31,6 @@
     } catch(Exception $err) {
 
     }
-    
-    //if(isset($_POST['date'])) {
-                  //  $horoscope = getHoroscope($_POST['date']); 
-                  //  $_SESSION["horoscope"] = serialize($horoscope);           
-                   // echo json_encode(true);
 
 ?>
+

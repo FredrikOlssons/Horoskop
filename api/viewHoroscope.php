@@ -7,11 +7,12 @@ session_start();
 if($_SERVER["REQUEST_METHOD"]) {
 
     if ($_SERVER["REQUEST_METHOD"] == "GET") {
-        if (isset($_SESSION[$horoscope])) {
+        if (isset($_SESSION["horoscope"])) {
             $saved_horoscope = unserialize($_SESSION['horoscope']); // kom ihåg att $saved_horoscope är horoskopet som ska läggas till i diven 
             echo json_encode($saved_horoscope);
+            exit;
         } else {
-        echo json_encode(""); }
+        echo json_encode(false); }
     } else {
     echo json_encode(""); }
 
@@ -19,6 +20,5 @@ if($_SERVER["REQUEST_METHOD"]) {
 } catch(Exception $err) {
        
 }
-
 
 ?>
