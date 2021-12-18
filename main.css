@@ -11,7 +11,7 @@
     background-position: center; 
     background-repeat: no-repeat; 
     background-size: cover;
-    justify-content: center;
+    
     
 }
 
@@ -28,27 +28,48 @@
     flex-direction: column;
 }
 
-h1 {
+#header {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100vw;
+    padding-right: 60px;
+}
+
+.headerText {
     color: antiquewhite;
     font-family: 'Sassy Frass', cursive;
-    font-size: 60px;
+    font-size: 100px;
     padding-top: 30px;
+    position: absolute;
+    margin: auto;
+    padding: 10px;
 }
 
 h2 {
     color: antiquewhite;
     font-family: 'Sassy Frass', cursive;
     font-size: 60px;
+    border: 20px;
+    padding: 20px;
 }
 
 #date{
     height: 50px;
-    font-size: 20px;    
-    padding-left: 2em;
-    padding-right: 2em;
+    font-size: 30px;    
+   
     color: rebeccapurple;
     border-radius: 20px;
     border: solid; color: rebeccapurple;
+}
+
+#addResult {
+    color: antiquewhite;
+    font-family: 'Sassy Frass', cursive;
+    font-size: 100px;
+    border: 0px;
+    height: 90px;
+    margin-top: 20px;
 }
 
 #containerForButtons {
@@ -64,12 +85,48 @@ button {
     color: rebeccapurple;
     background-color: white ;
     border: solid; color: rebeccapurple;
-    height: 50px;
+    height: 40px;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'The Nautigal', cursive;
 }
 
-#addResult {
-    color: antiquewhite;
-    font-family: 'Sassy Frass', cursive;
-    font-size: 100px;
-    border: 0px
+#inputDate {
+    border-radius: 20px;
+    color: rebeccapurple;
+    background-color: white ;
+    border: solid; color: rebeccapurple;
+    font-size: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'The Nautigal', cursive;
 }
+
+@font-face {
+    font-family: 'Sassy Frass', cursive;
+    src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/707108/neon.ttf);
+  }
+  
+  .neon {
+    font-family: 'The Nautigal', cursive;
+    color: antiquewhite;
+    font-size: 9vw;
+    line-height: 9vw;
+    text-shadow: 0 0 3vw rebeccapurple;
+    animation: neon 10s ease infinite;
+    -moz-animation: neon 10s ease infinite;
+    -webkit-animation: neon 10s ease infinite;
+  }
+  
+  @keyframes neon {
+    0%,
+    100% {
+      text-shadow: 0 0 1vw rebeccapurple, 0 0 3vw antiquewhite, 0 0 10vw antiquewhite, 0 0 10vw #ffffff, 0 0 .4vw antiquewhite, .5vw .5vw .1vw antiquewhite;
+      color: rgb(44, 42, 42);
+    }
+    50% {
+      text-shadow: 0 0 .5vw #8d8a85f1, 0 0 1.5vw #8d8a85f1, 0 0 5vw #8d8a85f1, 0 0 5vw #8d8a85f1, 0 0 .2vw #8d8a85f1, .5vw .5vw .1vw #9c4cb4;
+      color: lightgray;
+    }
+  }
+  
+  
