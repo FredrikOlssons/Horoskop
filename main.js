@@ -72,15 +72,9 @@ async function updateHoroscope() {
 
   if (result == true){
     console.log(result)
-    addResultInput() 
-    
-  }
-    
+    addResultInput()     
+  }    
 } 
-  
-    
-  //knappen uppdatera ska skriva ut ett nytt stjärntecken
-
 
 async function makeRequest(url, option) {
   try {

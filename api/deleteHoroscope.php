@@ -21,7 +21,6 @@ try {
 
 
 } catch(Exception $err) {
-    echo json_encode("No valid request");
-    //http_response_code($error->getcode);  
+    echo json_encode("No valid request"); 
 };
 ?>

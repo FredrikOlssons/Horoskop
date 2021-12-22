@@ -49,9 +49,9 @@
 h2 {
     color: antiquewhite;
     font-family: 'Sassy Frass', cursive;
-    font-size: 60px;
+    font-size: 50px;
     border: 20px;
-    padding: 20px;
+    padding-bottom: 10px;
 }
 
 #date{
@@ -69,7 +69,6 @@ h2 {
     font-size: 100px;
     border: 0px;
     height: 90px;
-    margin-top: 20px;
 }
 
 #containerForButtons {
