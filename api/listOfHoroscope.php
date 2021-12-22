@@ -74,17 +74,4 @@ function getsign($horoscopeList, $date) {
             return $horoscope['name'];
         };
     }
-};      
-
-?>
-
-
-
-
-
-
-
-
-
-
-
+};
