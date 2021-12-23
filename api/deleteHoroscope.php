@@ -19,7 +19,6 @@ try {
         }      
     };
 
-
 } catch(Exception $err) {
     echo json_encode("No valid request"); 
 };
